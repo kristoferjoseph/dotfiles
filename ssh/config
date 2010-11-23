@@ -1,4 +1,3 @@
-Host website
-    HostName kristoferjoseph.com
-    User kristof
-    Port 2233
+Host kristofer
+     HostName kristoferjoseph.com
+     User kristof
