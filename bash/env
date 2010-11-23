@@ -1,0 +1,15 @@
+export PATH=/usr/local/git/bin:/usr/local/bin/src:/usr/local/bin/:/usr/local/sbin:/usr/local/mysql/bin:~/bin:$PATH
+export CLICOLOR=1
+export LSCOLORS=gxfxcxdxbxegedabagacad
+export PATH=$PATH:/Users/kristoferjoseph/Documents/Developer/sdks/Flex/bin 
+export PATH=$PATH:/Users/kristoferjoseph/Documents/Developer/sdks/AIR/bin
+export PATH=$PATH:/Users/kristoferjoseph/Documents/Developer/sdks/Android
+export PATH=$PATH:/Users/kristoferjoseph/Documents/Developer/sdks/Android/tools
+export SUDO_INSTALL_GEMS=false
+# export GIT_EXTERNAL_DIFF="/usr/local/bin/git-external-chdiff.sh"
+export PATH="/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:$PATH"
+export FLEX_HOME=/Users/kristoferjoseph/Documents/Developer/sdks/Flex
+export EDITOR='mate -w'
+export FCEDIT='mate'
+export HISTCONTROL=erasedups
+export HISTSIZE=10000
