@@ -24,8 +24,9 @@ alias gcva='git commit -v -a'
 alias gb='git branch'
 alias gba='git branch -a'
 alias ga='git add -A'
+alias gc='git commit -m'
 # Commit pending changes and quote all args as message
-function gc() {
+function gcc() {
     git commit -v -a -m "$*"
 }
 alias gco='git checkout'
