@@ -10,6 +10,8 @@ alias tm='top -o vsize' #memory
 alias bitch='sudo'
 
 #Utility
+alias r='rake'
+alias a='ant'
 alias reload='source ~/bin/dotfiles/bash/aliases'
 alias ea='mate -w ~/bash/dotfiles/bash/aliases && reload'
 alias ee='mate ~/bash/dotfiles/bash/env'
@@ -25,8 +27,9 @@ alias gb='git branch'
 alias gba='git branch -a'
 alias ga='git add -A'
 alias gc='git commit -m'
+alias gca='git commit -m --amend'
 # Commit pending changes and quote all args as message
-function gcc() {
+function gg() {
     git commit -v -a -m "$*"
 }
 alias gco='git checkout'
