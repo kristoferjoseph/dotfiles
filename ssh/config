@@ -1,3 +1,7 @@
 Host kristofer
      HostName kristoferjoseph.com
      User kristof
+
+Host xdcore
+     HostName xdcore.corp.adobe.com
+     User xdcore

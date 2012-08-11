@@ -9,7 +9,7 @@ set histdup='all'
 
 PS1="\n\u: \w \$(parse_git_branch) \n➥ "
 
-source /usr/bin/git-completion.bash
+source ~/bin/git-completion.bash
 
 bind "set completion-ignore-case on"
 
