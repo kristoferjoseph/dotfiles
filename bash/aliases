@@ -11,12 +11,7 @@ alias tm='top -o vsize' #memory
 alias bitch='sudo'
 
 #Utility
-alias r='rake'
-alias a='ant'
 alias reload='source ~/bin/dotfiles/bash/aliases'
-alias ea='mvim -w ~/bin/dotfiles/bash/aliases && reload'
-alias ee='mvim ~/bin/dotfiles/bash/env'
-alias fl='tail -f /Users/krjoseph/Library/Preferences/Macromedia/Flash\ Player/Logs/flashlog.txt'
 alias mirb='macirb --simple-prompt'
 
 #Git
@@ -77,12 +72,5 @@ alias la="ls -la"
 alias c='clear'
 
 #Shortcuts
-alias axm='cd ~/Documents/workspace/axm'
-alias work='cd ~/Documents/workspace'
-alias bundles='cd ~/Library/Application\ Support/TextMate/Bundles/'
-alias sd='cd ~/Documents/Developer/ProjectSprouts'
+alias work='cd ~/Documents/work'
 
-# TDD / BDD
-alias aa='autotest'
-alias aaf='autotest -f' # Don't run all at start
-alias aas="./script/autospec"

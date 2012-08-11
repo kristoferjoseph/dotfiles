@@ -1,25 +1,8 @@
 export PATH=/usr/local/git/bin:/usr/local/bin/src:/usr/local/bin/:/usr/local/sbin:/usr/local/mysql/bin:~/bin:$PATH
 export CLICOLOR=1
 export LSCOLORS=gxfxcxdxbxegedabagacad
-export PATH=$PATH:"/Applications/Adobe Flash Builder 4.5/sdks/4.5.1/bin"
-export FLEX_HOME="/Applications/Adobe Flash Builder 4.5/sdks/4.5.1"
-export MAVEN_HOME=/usr/local/bin/maven
-export PATH=$PATH:/Users/krjoseph/Documents/Developer/sdks/AIR/bin
-export PATH=$PATH:/Users/krjoseph/Documents/Developer/sdks/Android/android-sdk-mac_86
-export PATH=$PATH:/Users/krjoseph/Documents/Developer/sdks/Android/android-sdk-mac_86/tools
-export PATH=$PATH:/Users/krjoseph/Documents/Developer/sdks/Android/phonegap/phonegap-android/bin
-export PATH="/Applications/ccollab_client:$PATH"
-export PATH=$PATH:/Users/krjoseph/Documents/Developer/CEF3/output/depot_tools
-export PATH=$HOME/local/bin:$PATH
-export ANT_HOME=/usr/local/ant
-export PATH=$PATH:/usr/local/ant/bin
 export NODE_PATH=/usr/local/node
-export SUDO_INSTALL_GEMS=false
-export PATH="/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:$PATH"
-export PATH="/Users/krjoseph/Documents/Developer/ION:$PATH"
-export EDITOR='mvim -w'
-export FCEDIT='mvim'
 export HISTCONTROL=erasedups
 export HISTSIZE=10000
-export P4PORT=theoden.macromedia.com:1760
-export GIT_EXTERNAL_DIFF="/usr/local/bin/git-external-chdiff.sh"
+
+
