@@ -16,7 +16,7 @@ alias mirb='macirb --simple-prompt'
 
 #Git
 alias g='git status'
-alias gl='git pull'
+alias gpl='git pull'
 alias gp='git push'
 alias gd='git diff --diff-filter=ACMRTUXB'
 alias gdm='git diff master'
