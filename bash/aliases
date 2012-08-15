@@ -14,6 +14,12 @@ alias bitch='sudo'
 alias reload='source ~/bin/dotfiles/bash/aliases'
 alias mirb='macirb --simple-prompt'
 
+#nodefront
+alias nff='nodefront fetch'
+alias nfi='nodefront insert'
+alias nfl='nodefront compile -l'
+alias nfm='nodefront minify'
+
 #Git
 alias g='git status'
 alias gpl='git pull'
@@ -33,6 +39,14 @@ alias gca='git commit --amend'
 alias eg='mvim .git/config'
 alias gco='git checkout'
 alias gl='git log'
+# Delete remote branch
+function grd() {
+  git push origin :$1
+}
+# Prune remote branches
+function grp() {
+  git remote prune origin
+}
 # Commit pending changes and quote all args as message
 function gg() {
     git commit -v -a -m "$*"
@@ -42,13 +56,13 @@ function gag() {
     git add -A && git commit -v -a -m "$*"
 }
 # Setup a tracking branch from [remote] [branch_name]
-function gbt() { 
-  git branch --track $2 $1/$2 && git checkout $2 
+function gbt() {
+  git branch --track $2 $1/$2 && git checkout $2
 }
 # Quickly clobber a file and checkout
-function grf() { 
+function grf() {
   rm $1
-  git checkout $1 
+  git checkout $1
 }
 # Call from inside an initialized Git repo, with the name of the repo.
 function new-git() {
@@ -66,7 +80,7 @@ alias gsa='git submodule foreach git add -A'
 
 #Common
 function cdl() {
- 'cd $1; ls'   
+ 'cd $1; ls'
 }
 alias cdd='cd -' #Go to last directory cd'd from
 alias la="ls -la"

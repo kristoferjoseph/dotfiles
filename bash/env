@@ -4,5 +4,7 @@ export LSCOLORS=gxfxcxdxbxegedabagacad
 export NODE_PATH=/usr/local/node
 export HISTCONTROL=erasedups
 export HISTSIZE=10000
+export CHROMIUM_SRC_PATH=/Users/krjoseph/Documents/Web/Chromium/chromium_source/src
+export PATH=/Users/krjoseph/Documents/Web/Chromium/depot_tools:$PATH
 
 
