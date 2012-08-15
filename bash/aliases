@@ -23,7 +23,7 @@ alias nfm='nodefront minify'
 #Git
 alias g='git status'
 alias gpl='git pull'
-alias gp='git push'
+alias gph='git push'
 alias gd='git diff --diff-filter=ACMRTUXB'
 alias gdm='git diff master'
 alias gm='git mergetool'
