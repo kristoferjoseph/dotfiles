@@ -2,6 +2,7 @@
 alias o='open . &'
 alias chrome='open -a Chrome'
 alias reload='. ~/.bashrc'
+alias dotfiles='subl ~/bin/dotfiles'
 
 #Processes
 alias tu='top -o cpu' #cpu
@@ -11,8 +12,7 @@ alias tm='top -o vsize' #memory
 alias bitch='sudo'
 
 #Utility
-alias reload='source ~/bin/dotfiles/bash/aliases'
-alias mirb='macirb --simple-prompt'
+#alias reload='source ~/bin/dotfiles/bash/aliases'
 
 #nodefront
 alias nff='nodefront fetch'
@@ -36,17 +36,26 @@ alias ga='git add -A'
 alias gai='git add -i'
 alias gc='git commit -m'
 alias gca='git commit --amend'
-alias eg='mvim .git/config'
+alias eg='subl .git/config'
 alias gco='git checkout'
 alias gl='git log'
+# Prune remote branches
+alias grp='git remote prune origin'
+#Clone
+function gcl() {
+  git clone $1
+}
+
+#Track remote branch
+function gtr() {
+  git checkout -b $1 origin/$1
+}
+
 # Delete remote branch
 function grd() {
   git push origin :$1
 }
-# Prune remote branches
-function grp() {
-  git remote prune origin
-}
+
 # Commit pending changes and quote all args as message
 function gg() {
     git commit -v -a -m "$*"
