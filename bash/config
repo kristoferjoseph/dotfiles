@@ -1,13 +1,49 @@
-function parse_git_dirty {
-  [[ $(git status 2> /dev/null | tail -n1) != "nothing to commit (working directory clean)" ]] && echo "*"
-}
-function parse_git_branch {
-  git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/[\1$(parse_git_dirty)]/"
+source ~/.git-completion.sh
+source ~/.git-prompt.sh
+
+# enable git unstaged indicators - set to a non-empty value
+GIT_PS1_SHOWDIRTYSTATE="."
+
+# enable showing of untracked files - set to a non-empty value
+GIT_PS1_SHOWUNTRACKEDFILES="."
+
+# enable stash checking - set to a non-empty value
+GIT_PS1_SHOWSTASHSTATE="."
+
+# enable showing of HEAD vs its upstream
+GIT_PS1_SHOWUPSTREAM="auto"
+
+BLACK=$(tput setaf 0)
+RED=$(tput setaf 1)
+GREEN=$(tput setaf 2)
+YELLOW=$(tput setaf 3)
+LIME_YELLOW=$(tput setaf 190)
+POWDER_BLUE=$(tput setaf 153)
+BLUE=$(tput setaf 4)
+MAGENTA=$(tput setaf 5)
+CYAN=$(tput setaf 6)
+WHITE=$(tput setaf 7)
+BRIGHT=$(tput bold)
+NORMAL=$(tput sgr0)
+BLINK=$(tput blink)
+REVERSE=$(tput smso)
+UNDERLINE=$(tput smul)
+
+# PROMPT_COMMAND='__git_ps1 "${MAGENTA}\w${WHITE} on${CYAN}" "\n`set_prefix`${NORMAL} ${CYAN}➥ ${WHITE}"'
+# PROMPT_COMMAND='__git_ps1 "${MAGENTA}\u${WHITE} in ${GREEN}\h:\w${WHITE} on${CYAN}" "\n`set_prefix`${NORMAL} ${CYAN}➥ ${WHITE}"'
+# PROMPT_COMMAND='__git_ps1 "`date "+\@"` ${MAGENTA}\u${WHITE} in ${GREEN}\h:\w${WHITE} on${CYAN}" "\n`set_prefix`${NORMAL} ${CYAN}ʕ ⌁⍜ ⍾ ⍜ʔ${WHITE} "'
+PROMPT_COMMAND='__git_ps1 "`date "+\@"` ${GREEN}\w${WHITE} on${CYAN}" "\n`set_prefix`${NORMAL} ${CYAN}ʕ ⌁⍜ ⍾ ⍜ʔ${WHITE} "'
+
+function set_prefix {
+    BRANCH=`__git_ps1`
+    if [[ -z $BRANCH ]]; then
+         echo "${BRIGHT}✖︎"
+    else
+        echo "${MAGENTA}❤︎"
+    fi
 }
 
 set histdup='all'
-
-PS1="\n\u: \w \$(parse_git_branch) \n➥ "
-
 shopt -s histappend
 EVENT_NOKQUEUE=yes
+
