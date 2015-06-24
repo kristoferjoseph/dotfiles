@@ -2,27 +2,16 @@
 alias o='open . &'
 alias chrome='open -a Chrome'
 alias reload='. ~/.bashrc'
-alias dotfiles='subl ~/bin/dotfiles'
-
+alias vim='mvim -v'
 #Processes
 alias tu='top -o cpu' #cpu
 alias tm='top -o vsize' #memory
 
-#Anger
-alias bitch='sudo'
-
-#Utility
-#alias reload='source ~/bin/dotfiles/bash/aliases'
-
-#nodefront
-alias nff='nodefront fetch'
-alias nfi='nodefront insert'
-alias nfl='nodefront compile -l'
-alias nfm='nodefront minify'
-
 #Git
+alias git='hub'
 alias g='git status'
 alias gpl='git pull'
+alias gpr='git pull --rebase'
 alias gph='git push'
 alias gd='git diff --diff-filter=ACMRTUXB'
 alias gdm='git diff master'
@@ -41,6 +30,7 @@ alias gco='git checkout'
 alias gl='git log'
 # Prune remote branches
 alias grp='git remote prune origin'
+alias gnew="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative HEAD..dev"
 #Clone
 function gcl() {
   git clone $1
